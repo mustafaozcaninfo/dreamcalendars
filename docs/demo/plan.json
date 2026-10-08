@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "household_id": "synthetic-household",
+  "revision": 2,
+  "timezone": "America/New_York",
+  "start": "2026-10-12",
+  "end": "2026-10-23",
+  "summary": {
+    "baseline_gap_child_hours": 12.0,
+    "remaining_gap_child_hours": 0.0,
+    "covered_by_suggested_pto_child_hours": 12.0,
+    "suggested_pto_days": 2,
+    "pto_by_adult": {
+      "parent-a": 1,
+      "parent-b": 1
+    },
+    "review_queue_count": 1
+  },
+  "days": [
+    {
+      "date": "2026-10-12",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-13",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-14",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-15",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-16",
+      "baseline_gap_child_hours": 4.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": [
+        "parent-a"
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-18",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-19",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-20",
+      "baseline_gap_child_hours": 8.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": [
+        "parent-b"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-22",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    },
+    {
+      "date": "2026-10-23",
+      "baseline_gap_child_hours": 0.0,
+      "remaining_gap_child_hours": 0.0,
+      "gap_windows": [],
+      "suggested_pto": []
+    }
+  ],
+  "confirmed_events": [
+    {
+      "id": "closure-oct-12",
+      "date": "2026-10-12",
+      "title": "School closed: staff development",
+      "kind": "school_closed",
+      "status": "confirmed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "Synthetic fixture: school is closed on October 12, 2026.",
+      "reviewed_by": "demo-reviewer"
+    },
+    {
+      "id": "dismissal-oct-16",
+      "date": "2026-10-16",
+      "title": "Early dismissal",
+      "kind": "early_dismissal",
+      "dismissal": "13:00",
+      "status": "confirmed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "On October 16, 2026, students will be dismissed at 1:00 pm instead of 3:00 pm.",
+      "reviewed_by": "demo-reviewer"
+    },
+    {
+      "id": "closure-oct-20",
+      "date": "2026-10-20",
+      "title": "School closed: teacher planning",
+      "kind": "school_closed",
+      "status": "confirmed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "On October 20, 2026, school will be closed for a teacher planning day.",
+      "reviewed_by": "demo-reviewer"
+    }
+  ],
+  "review_queue": [
+    {
+      "id": "possible-oct-23",
+      "date": "2026-10-23",
+      "title": "Possible closure — unverified test candidate",
+      "kind": "school_closed",
+      "status": "proposed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "Synthetic test candidate only; the source does not establish October 23. Requires review.",
+      "reviewed_by": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "demo-school",
+      "title": "Synthetic Demo Elementary notice",
+      "locator": "examples/school-notice.txt (synthetic fixture)",
+      "retrieved_on": "2026-10-08"
+    }
+  ],
+  "assumptions": [
+    "Synthetic/demo status depends on input; no source was fetched or independently verified.",
+    "Single household timezone; 30-minute same-day intervals; interchangeable caregivers with explicit capacity.",
+    "PTO suggestions require employer and caregiver approval; no appointment is booked.",
+    "Child-hours count simultaneous children separately. Unknown/proposed events are not treated as confirmed."
+  ],
+  "input_sha256": "5edca7f61c40e354a2f39a582974ad520478c305851ed24795a8dd0f49cdf52a"
+}

@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DreamCalendars//Reprint Prototype//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:1d1956c5f1ad5c5f18560032f58aac79@reprint.dreamcalendars.com
+DTSTAMP:20261008T084219Z
+SEQUENCE:2
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:School closed: staff development
+DESCRIPTION:Kind: school_closed\; source: demo-school\; evidence: Synthetic
+  fixture: school is closed on October 12\, 2026.
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a6fbc79a524ee3bd7650d878c3565f17@reprint.dreamcalendars.com
+DTSTAMP:20261008T084219Z
+SEQUENCE:2
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Early dismissal
+DESCRIPTION:Kind: early_dismissal\; source: demo-school\; evidence: On Octo
+ ber 16\, 2026\, students will be dismissed at 1:00 pm instead of 3:00 pm.\
+ ; dismissal: 13:00 (America/New_York)
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:de537faf7bd4f9cff4b8eaf3e167bc54@reprint.dreamcalendars.com
+DTSTAMP:20261008T084219Z
+SEQUENCE:2
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:School closed: teacher planning
+DESCRIPTION:Kind: school_closed\; source: demo-school\; evidence: On Octobe
+ r 20\, 2026\, school will be closed for a teacher planning day.
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

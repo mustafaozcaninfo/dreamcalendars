@@ -23,15 +23,7 @@ def main():
                 if len(value) >= 6 and '$' not in value and value.lower() not in ('password', 'passwd', 'changeme', 'replace_me', 'username'):
                     secrets.add(value.encode())
 
-    forbidden = {
-        '.env', '.cursor/deploy.local.env', '.cursor/cloud_deploy_key',
-        'config/indexing.local.php', 'public_html/connection.php',
-        'public_html/SaveCalendars/app/db_connection.php',
-        'public_html/webtest/ayar.php',
-        'public_html/apps/yearly/server/adapter.php',
-        'public_html/apps/yearly/server/holiday.php',
-        'public_html/apps/list.php', 'public_html/apps/generate.php',
-    }
+    forbidden = {'.env'}
     entries = subprocess.check_output(['git', 'ls-files', '--stage', '-z'], cwd=ROOT)
     blobs = []
     failures = set()
@@ -41,7 +33,10 @@ def main():
         meta, path_raw = entry.split(b'\t', 1)
         mode, oid, stage = meta.split()
         path = os.fsdecode(path_raw)
-        if path in forbidden:
+        parts = Path(path).parts
+        is_private = any(part in ('private', '.venv', 'build', '__pycache__') for part in parts)
+        is_env = Path(path).name.startswith('.env') and Path(path).name != '.env.example'
+        if path in forbidden or is_private or is_env:
             failures.add(path)
         if mode == b'160000':
             failures.add(path + ' (unexpected embedded repository)')

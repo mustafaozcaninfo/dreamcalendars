@@ -1,12 +1,9 @@
-# DreamCalendars
+# DreamCalendars Reprint
 
-This workspace is linked to `mustafaozcaninfo/dreamcalendars`, on branch `main`.
-Load the installed `dreamcalendars-hostinger` skill when working on hosting, deployment, GitHub setup, or directory mappings. Its local path is recorded in `.env` as `PROJECT_SKILL_FILE`.
+This repository contains only the Reprint startup prototype, its synthetic examples, and English documentation. The production DreamCalendars PHP website is maintained separately; this repository has no production deployment workflow.
 
-Credentials and machine-specific paths live in `.env`; use `.env.example` as the shareable schema. Existing deploy scripts load it through `.cursor/deploy.local.env`.
-Website files belong under `public_html/`; the corresponding production directory is `DEPLOY_ROOT_PRODUCTION`. Private server config belongs outside that directory. There is no staging.
+Run project commands from the repository root. Python 3.11+ is required. Keep the offline planner independent of third-party services. Claude extraction is optional and must keep all candidates proposed until human review. Do not claim live API verification, customer traction, or unimplemented features without evidence.
 
-The GitHub repository is public. Keep `.env`, SSH private keys, `config/indexing.local.php`, and the ignored PHP files containing inline credentials out of Git. Their `*.example` files preserve code with credential placeholders. Existing runtime PHP files do not automatically read `.env`.
-Before committing or pushing, run `python3 scripts/dc-git-secret-check.py` against the staged snapshot. Do not print secret values. GitHub authentication uses `gh` and the OS keychain; do not save a GitHub token in `.env`.
+Before committing or pushing, stage the intended files, run `python3 scripts/dc-git-secret-check.py`, and review the staged changes. Keep `.env`, API credentials, private documents, local outputs, and real household data out of Git. GitHub authentication uses the existing `gh` login and OS keychain.
 
-Deploy only when requested. GitHub pushes do not deploy to Hostinger. Use selected-file deployments with `scripts/dc-deploy.sh --confirm <paths>`; check changed PHP with `php -l`. A full pull can overwrite local edits.
+For planner, extraction, or export changes, run `python3 -m unittest discover -s tests -v`. Keep README commands, demo links, and the optional CI template consistent with the root project layout. Generated examples must remain synthetic.

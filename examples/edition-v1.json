@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "household_id": "synthetic-household",
+  "revision": 1,
+  "timezone": "America/New_York",
+  "start": "2026-10-12",
+  "end": "2026-10-23",
+  "adults": [
+    {
+      "id": "parent-a",
+      "pto_budget": 1,
+      "care_capacity": 2,
+      "work_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "work_hours": [
+        "09:00",
+        "17:00"
+      ],
+      "off_dates": [],
+      "pto_blackouts": [
+        "2026-10-20"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "parent-b",
+      "pto_budget": 1,
+      "care_capacity": 2,
+      "work_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "work_hours": [
+        "09:00",
+        "17:00"
+      ],
+      "off_dates": [
+        "2026-10-12"
+      ],
+      "pto_blackouts": [],
+      "unavailable": [
+        {
+          "date": "2026-10-16",
+          "hours": [
+            "09:00",
+            "17:00"
+          ]
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": "child-1",
+      "school_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "school_hours": [
+        "09:00",
+        "17:00"
+      ],
+      "care_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "care_hours": [
+        "09:00",
+        "17:00"
+      ],
+      "baseline_confirmed": true,
+      "external_care": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "demo-school",
+      "title": "Synthetic Demo Elementary notice",
+      "locator": "examples/school-notice.txt (synthetic fixture)",
+      "retrieved_on": "2026-10-08"
+    }
+  ],
+  "events": [
+    {
+      "id": "closure-oct-12",
+      "date": "2026-10-12",
+      "title": "School closed: staff development",
+      "kind": "school_closed",
+      "status": "confirmed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "Synthetic fixture: school is closed on October 12, 2026.",
+      "reviewed_by": "demo-reviewer"
+    },
+    {
+      "id": "dismissal-oct-16",
+      "date": "2026-10-16",
+      "title": "Early dismissal",
+      "kind": "early_dismissal",
+      "dismissal": "15:00",
+      "status": "confirmed",
+      "children": [
+        "child-1"
+      ],
+      "source_id": "demo-school",
+      "evidence": "Synthetic prior edition: dismissal on October 16, 2026 is at 3:00 pm.",
+      "reviewed_by": "demo-reviewer"
+    }
+  ]
+}

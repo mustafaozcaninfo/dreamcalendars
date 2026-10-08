@@ -1,0 +1,121 @@
+{
+  "old_revision": 1,
+  "new_revision": 2,
+  "event_changes": [
+    {
+      "id": "closure-oct-20",
+      "change": "added",
+      "before": null,
+      "after": {
+        "id": "closure-oct-20",
+        "date": "2026-10-20",
+        "title": "School closed: teacher planning",
+        "kind": "school_closed",
+        "status": "confirmed",
+        "children": [
+          "child-1"
+        ],
+        "source_id": "demo-school",
+        "evidence": "On October 20, 2026, school will be closed for a teacher planning day.",
+        "reviewed_by": "demo-reviewer"
+      }
+    },
+    {
+      "id": "dismissal-oct-16",
+      "change": "updated",
+      "before": {
+        "id": "dismissal-oct-16",
+        "date": "2026-10-16",
+        "title": "Early dismissal",
+        "kind": "early_dismissal",
+        "dismissal": "15:00",
+        "status": "confirmed",
+        "children": [
+          "child-1"
+        ],
+        "source_id": "demo-school",
+        "evidence": "Synthetic prior edition: dismissal on October 16, 2026 is at 3:00 pm.",
+        "reviewed_by": "demo-reviewer"
+      },
+      "after": {
+        "id": "dismissal-oct-16",
+        "date": "2026-10-16",
+        "title": "Early dismissal",
+        "kind": "early_dismissal",
+        "dismissal": "13:00",
+        "status": "confirmed",
+        "children": [
+          "child-1"
+        ],
+        "source_id": "demo-school",
+        "evidence": "On October 16, 2026, students will be dismissed at 1:00 pm instead of 3:00 pm.",
+        "reviewed_by": "demo-reviewer"
+      }
+    },
+    {
+      "id": "possible-oct-23",
+      "change": "added",
+      "before": null,
+      "after": {
+        "id": "possible-oct-23",
+        "date": "2026-10-23",
+        "title": "Possible closure — unverified test candidate",
+        "kind": "school_closed",
+        "status": "proposed",
+        "children": [
+          "child-1"
+        ],
+        "source_id": "demo-school",
+        "evidence": "Synthetic test candidate only; the source does not establish October 23. Requires review.",
+        "reviewed_by": null
+      }
+    }
+  ],
+  "source_metadata_changed": false,
+  "household_settings_changed": false,
+  "calendar_only_added_gap_child_hours": 10.0,
+  "total_added_gap_child_hours": 10.0,
+  "new_remaining_gap_child_hours": 0.0,
+  "days_changed": [
+    {
+      "date": "2026-10-16",
+      "before": {
+        "date": "2026-10-16",
+        "baseline_gap_child_hours": 2.0,
+        "remaining_gap_child_hours": 0.0,
+        "gap_windows": [],
+        "suggested_pto": [
+          "parent-a"
+        ]
+      },
+      "after": {
+        "date": "2026-10-16",
+        "baseline_gap_child_hours": 4.0,
+        "remaining_gap_child_hours": 0.0,
+        "gap_windows": [],
+        "suggested_pto": [
+          "parent-a"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "before": {
+        "date": "2026-10-20",
+        "baseline_gap_child_hours": 0.0,
+        "remaining_gap_child_hours": 0.0,
+        "gap_windows": [],
+        "suggested_pto": []
+      },
+      "after": {
+        "date": "2026-10-20",
+        "baseline_gap_child_hours": 8.0,
+        "remaining_gap_child_hours": 0.0,
+        "gap_windows": [],
+        "suggested_pto": [
+          "parent-b"
+        ]
+      }
+    }
+  ]
+}
