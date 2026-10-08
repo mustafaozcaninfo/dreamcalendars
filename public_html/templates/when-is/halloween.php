@@ -1,4 +1,0 @@
-<?php
-$day="Halloween";
-$content="";
-?>

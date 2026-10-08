@@ -1,47 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
 .DS_Store
-._*
-
-# Logs / runtime
-public_html/php_errors.log
-public_html/*.log
+build/
+private/
 *.log
-
-# Large server-only content (track PHP/CSS/JS changes, not bulk assets)
-public_html/printable/
-public_html/used/
-public_html/sancak.m3u
-public_html/make-a-website.tar.gz
-
-# Deploy artifacts
-deploy-backups/
-
-config/indexing.local.php
-
-# Local credentials and SSH private key
-/.env
-/.env.*
-!/.env.example
-/.cursor/deploy.local.env
-/.cursor/cloud_deploy_key
-
-# Existing runtime files with inline credentials; copy *.example for a fresh checkout
-/public_html/connection.php
-/public_html/SaveCalendars/app/db_connection.php
-/public_html/webtest/ayar.php
-/public_html/apps/yearly/server/adapter.php
-/public_html/apps/yearly/server/holiday.php
-/public_html/apps/list.php
-/public_html/apps/generate.php
-
-# Server snapshots and editor/transfer artifacts
-*.sql.gz
-*.tar
-*.tar.gz
-*.zip
-*.bak
-*.backup
-
-# Independent beta checkouts and nested repository metadata
-/beta/*
-!/beta/reprint/
-**/.git/
