@@ -32,3 +32,7 @@ git push origin main
 Check access with `scripts/dc-deploy-doctor.sh`. Website paths map one-to-one from local `public_html/<path>` to the configured production web root. Deploy selected files with `scripts/dc-deploy.sh --confirm <paths>` only when a production deployment is intended. A GitHub push alone does not deploy the website.
 
 Project details and the installed Codex skill location are recorded in `dreamcalendars-hostinger.md` and `.env`.
+
+## Reprint startup prototype
+
+[DreamCalendars Reprint](beta/reprint/README.md) explores edition-specific correction strips for printed school calendars, with source evidence and household care impact. The [Claude for Startups application drafts](beta/reprint/docs/CLAUDE-STARTUPS.md), research, and runnable synthetic demo are in `beta/reprint/`.

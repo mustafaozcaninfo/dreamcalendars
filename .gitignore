@@ -42,5 +42,6 @@ config/indexing.local.php
 *.backup
 
 # Independent beta checkouts and nested repository metadata
-/beta/
+/beta/*
+!/beta/reprint/
 **/.git/
