@@ -1,0 +1,116 @@
+<?php
+// REPLACE_ME
+// REPLACE_ME
+// Included aws/aws-sdk-php via Composer's autoloader
+// Installed with: composer.phar require aws/aws-sdk-php
+
+function slug($filename)
+{
+
+$ext = pathinfo($filename, PATHINFO_EXTENSION);
+$alt = basename($filename, ".".$ext);
+$arr = explode("-",$alt);
+$string = implode(" ",$arr);
+    return $string;
+}
+
+function slug_uri($filename)
+{
+
+$ext = pathinfo($filename, PATHINFO_EXTENSION);
+$alt = basename($filename, ".".$ext);
+$arr = explode("-",$alt);
+    return $alt;
+}
+
+require 'vendor/autoload.php';
+use Aws\S3\S3Client;
+use Phpfastcache\CacheManager;
+use Phpfastcache\Config\ConfigurationOption;
+
+
+CacheManager::setDefaultConfig(new ConfigurationOption([
+    'path' => '/home/u654721528/domains/dreamcalendars.com/public_html/apps/', // or in windows "C:/tmp/"
+]));
+
+// Get instance of files cache
+$objFilesCache = CacheManager::getInstance('files');
+
+// Configure a client using Spaces
+$s3 = new Aws\S3\S3Client([
+        'version' => 'latest',
+        'region'  => 'sfo2',
+        'endpoint' => 'https://sfo2.digitaloceanspaces.com',
+        'credentials' => [
+                'key'    => 'REPLACE_ME',
+                'secret' => 'REPLACE_ME',
+            ],
+]);
+
+$bucket = 'dreamcalendarscom';
+$year="2027";
+$month="august";
+$cdn="https://cdn.dreamcalendars.com/";
+$key = $bucket."_".$year."_".$month;
+
+
+
+// Try to fetch cached item with "welcome_message" key
+$CachedString = $objFilesCache->getItem($key);
+
+if (is_null($CachedString->get()))
+{
+    // The cached entry doesn't exist
+    $numberOfSeconds = 31557600;
+
+    $result = $s3->listObjects(['Bucket' => $bucket, "Prefix" => 'printable/'.$year.'/'.$month.'']);
+    $contents = $result['Contents'];
+
+    $CachedString->set($contents)->expiresAfter($numberOfSeconds);
+    $objFilesCache->save($CachedString);
+    $get_data=$CachedString->get();
+    echo "not cached";
+
+    foreach ($get_data as $object) {
+$filestring= $object['Key'];
+
+      if($filestring !== '.' && $filestring !== '..'){
+$alt=slug($filestring);
+$downloadurl=slug_uri($filestring);
+echo '          <div class="col-md-6">
+              <div class="card mb-6 shadow-sm mb-3">
+                    <a class="click-me" href="'.$cdn.$filestring.'" data-href="/download/monthly/'.$year.'/'.$month.'/'.$downloadurl.'" title="'.$alt.'">
+                <img itemprop="photo" class="card-img-top b-lazy" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="'.$cdn.$filestring.'" alt="'.$alt.'">
+                <div class="card-body">
+                  <p class="card-text text-center">'.$alt.'</p>
+                </div></a>
+              </div>
+            </div>';
+        }
+
+        }
+
+}
+else
+{
+  echo "yes cached";
+  $get_data=$CachedString->get();
+  foreach ($get_data as $object) {
+    $filestring= $object['Key'];
+
+          if($filestring !== '.' && $filestring !== '..'){
+    $alt=slug($filestring);
+    $downloadurl=slug_uri($filestring);
+    echo '          <div class="col-md-6">
+                  <div class="card mb-6 shadow-sm mb-3">
+                        <a class="click-me" href="'.$cdn.$filestring.'" data-href="/download/monthly/'.$year.'/'.$month.'/'.$downloadurl.'" title="'.$alt.'">
+                    <img itemprop="photo" class="card-img-top b-lazy" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="'.$cdn.$filestring.'" alt="'.$alt.'">
+                    <div class="card-body">
+                      <p class="card-text text-center">'.$alt.'</p>
+                    </div></a>
+                  </div>
+                </div>';
+            }
+      }
+
+}

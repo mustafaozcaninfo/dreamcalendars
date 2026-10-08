@@ -1,0 +1,62 @@
+{
+  "/": {
+    "title": "{year} Calendars: Printable Yearly and Monthly - Dream Calendars",
+    "description": "Plan your life flow using our carefully created calendars each year. The most beautiful monthly, weekly and yearly calendars of {year}!"
+  },
+  "/calendar/{month}-{year}": {
+    "title": "{monthTitle} {year} Calendar - Free Printable with Holidays and Observances",
+    "description": "{monthTitle} {year} calendar. View the free printable monthly {monthTitle} {year} calendar and print in one click. Includes holidays and daily sunrise-sunset."
+  },
+  "/calendar/{year}": {
+    "title": "{year} Calendar - Free Printable Yearly Calendar with Holidays",
+    "description": "Free printable {year} yearly calendar with US federal holidays, week numbers, and monthly views. Download and print in one click."
+  },
+  "/calendar/blank": {
+    "title": "Blank Calendar Templates - Free Printable PDF",
+    "description": "Free blank calendar templates for any month or year. Print or customize printable blank calendars."
+  },
+  "/holidays/{year}": {
+    "title": "{year} US Holidays - Federal & Observance Dates",
+    "description": "Complete list of {year} US federal holidays and observances with dates, weekdays, and printable calendars."
+  },
+  "/when-is/{slug}": {
+    "title": "When Is {holiday}? {year} Date & Calendar",
+    "description": "When is {holiday} in {year}? Find the exact date, weekday, and printable calendar for {holiday}."
+  },
+  "/leap-years": {
+    "title": "Leap Years - List, Rules & Printable Calendars",
+    "description": "Leap year list, rules, and printable calendars. Find which years are leap years and why."
+  },
+  "/week-numbers/{year}": {
+    "title": "{year} Week Numbers - US & ISO 8601 Calendar",
+    "description": "Week numbers for {year} in US and ISO 8601 format. Printable week number calendar."
+  },
+  "/day-numbers/{year}": {
+    "title": "{year} Day Numbers - Day of Year Calendar",
+    "description": "Day of year numbers for {year}. Printable day-number calendar and reference table."
+  },
+  "/article/{slug}": {
+    "title": "{title}",
+    "description": "{description}"
+  },
+  "/pages/{slug}": {
+    "title": "{title} | Dream Calendars",
+    "description": "{description}"
+  },
+  "/daylight-saving-time": {
+    "title": "{year} Daylight Saving Time - Start & End Dates",
+    "description": "When does daylight saving time start and end in {year}? US DST dates and printable calendars."
+  },
+  "/current-moon": {
+    "title": "Current Moon Phase Today - Lunar Calendar",
+    "description": "Today's moon phase, illumination, and lunar calendar. Current moon phase for sky watchers."
+  },
+  "/download": {
+    "title": "Download Printable Calendar",
+    "description": "Download free printable calendar templates."
+  },
+  "/make": {
+    "title": "Calendar Editor - Customize Your Calendar",
+    "description": "Create and customize your own printable calendar online."
+  }
+}

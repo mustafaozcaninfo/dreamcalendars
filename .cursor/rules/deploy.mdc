@@ -1,0 +1,13 @@
+---
+description: Agent deploy policy for DreamCalendars (production only)
+alwaysApply: true
+---
+
+# DreamCalendars — Deploy policy (agents)
+
+- **No staging** on this project — every deploy is production
+- Do **not** run `scripts/dc-deploy.sh` unless the user explicitly asks to deploy
+- When deploying, always use `--confirm`
+- Run `scripts/dc-deploy-doctor.sh` first if SSH/deploy issues
+- After HTML/CSS changes, suggest `scripts/dc-cf-purge.sh`
+- Keep credentials in `.env`; never commit it or copy secrets into docs, logs, or responses

@@ -1,0 +1,83 @@
+<?php
+
+  $servername = "localhost";
+  $username = "u654721528_dream";
+  $password = "REPLACE_ME";
+  $dbname = "u654721528_dream";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+function seo($s) {
+ $tr = array('ş','Ş','ı','I','İ','ğ','Ğ','ü','Ü','ö','Ö','Ç','ç','(',')','/',':',',','&','|','"',"'");
+ $eng = array('s','s','i','i','i','g','g','u','u','o','o','c','c','','','-','-','','-','','','');
+ $s = str_replace($tr,$eng,$s);
+ $s = strtolower($s);
+ $s = preg_replace('/&amp;amp;amp;amp;amp;amp;amp;amp;amp;.+?;/', '', $s);
+ $s = preg_replace('/\s+/', '-', $s);
+ $s = preg_replace('|-+|', '-', $s);
+ $s = preg_replace('/#/', '', $s);
+ $s = str_replace('.', '', $s);
+ $s = trim($s, '-');
+ return $s;
+}
+function sifre_uret($uzunluk) {
+    $karakterler = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPRSTUVYZ";
+    $karakter_sayi = strlen($karakterler);
+        for ($ras = 0; $ras < $uzunluk; $ras++) {
+            $rakam_ver = rand(0,$karakter_sayi-1);
+            $sifre_ver .= $karakterler[$rakam_ver];
+        }
+
+return $sifre_ver;
+}
+
+function myUrlEncode($string) {
+    $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%2B', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
+    $replacements = array('!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
+    return str_replace($entities, $replacements, urlencode($string));
+}
+function cleanURL($textURL) {
+  $URL = strtolower(preg_replace( array('/[^a-z0-9\- ]/i', '/[ \-]+/'), array('', '-'), $textURL));
+            return $URL;
+     }
+function save_image($img,$fullpath){
+  $ch = curl_init ($img);
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
+  $rawdata=curl_exec($ch);
+  curl_close ($ch);
+  if(file_exists($fullpath)){
+      unlink($fullpath);
+  }
+  $fp = fopen($fullpath,'x');
+  fwrite($fp, $rawdata);
+  fclose($fp);
+}
+
+
+function filter($data) {
+ $data = trim(htmlentities(strip_tags($data)));
+
+ if (get_magic_quotes_gpc())
+  $data = stripslashes($data);
+
+ $data = mysqli_real_escape_string($data);
+
+ return $data;
+}
+
+function TirnakTemizle($a){
+$tirnak = array("'",'"');
+$temizle = array("","");
+
+return str_replace($tirnak,$temizle,$a);
+
+}
+
+?>

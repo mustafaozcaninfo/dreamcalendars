@@ -1,0 +1,51 @@
+---
+description: SSH access, deploy credentials, and server setup for DreamCalendars
+alwaysApply: false
+---
+
+# DreamCalendars — Deployment
+
+Credentials: `.env` (`.cursor/deploy.local.env` compatibility loader)
+
+## SSH access
+
+| | |
+|--|--|
+| Host | `root@2.25.147.42` |
+| Panel | HestiaCP — `web.typecalendar.com` |
+| Password | `.env` → `SSHPASS` |
+
+### Passwordless deploy
+
+`DEPLOY_SSH_KEY=.cursor/cloud_deploy_key` — same key as MakeACalendar (shared VPS).
+
+### Password deploy (fallback)
+
+`.env` includes `SSHPASS`. The existing transport uses `sshpass -e` when installed; key authentication is also configured.
+
+## Remote path
+
+`/home/dreamcalendars/web/dreamcalendars.com/public_html/`
+
+## Deploy commands
+
+| Command | Purpose |
+|---------|---------|
+| `scripts/dc-deploy-doctor.sh` | SSH/key/path diagnostics |
+| `scripts/dc-deploy.sh --confirm file.php` | production deploy |
+| `scripts/dc-deploy-changed.sh` | git-changed files → production |
+| `scripts/dc-pull.sh` | server → local rsync |
+| `scripts/dc-cf-purge.sh` | Cloudflare cache purge |
+| `scripts/dc-mysql.sh --remote "SQL"` | run SQL on server |
+
+## Cloudflare
+
+| Var | Value |
+|-----|-------|
+| `CF_EMAIL` | `info@dreamcalendars.com` |
+| `CF_API_KEY` | Global API Key (`X-Auth-Key`) |
+| `CF_ZONE_ID` | `cc28022618d7bc662beb91e81add7994` |
+
+## Agent policy
+
+No staging. Do not run `dc-deploy.sh` unless user explicitly requests production deploy.

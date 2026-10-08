@@ -1,0 +1,9 @@
+<?php
+/** Copy to config/indexing.local.php — Bing/Yandex API keys */
+return [
+    // 'bing_api_key' => 'your-bing-webmaster-api-key',
+    // 'yandex_enabled' => true,
+    // 'yandex_oauth_token' => '...',
+    // 'yandex_user_id' => '...',
+    // 'yandex_host_id' => '...',
+];

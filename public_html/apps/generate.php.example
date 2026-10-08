@@ -1,0 +1,15 @@
+<?php
+error_reporting(1);
+ini_set('display_errors', 1);
+require_once 'vendor/autoload.php';
+use OpenCloud\OpenStack;
+$client = new OpenStack("https://auth.cloud.ovh.net/v2.0", array(
+'username' => "BNFjzQrayVmu",
+'password' => "REPLACE_ME",
+'tenantName' => "1084012069526701",
+));
+
+
+$objectStoreService = $client->objectStoreService('swift', "BHS3");
+
+var_dump($objectStoreService);

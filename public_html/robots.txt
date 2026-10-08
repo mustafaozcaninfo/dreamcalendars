@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps (segmented index)
+Sitemap: https://www.dreamcalendars.com/sitemap.xml
+Sitemap: https://www.dreamcalendars.com/sitemap-calendars.xml
+Sitemap: https://www.dreamcalendars.com/sitemap-holidays.xml
+Sitemap: https://www.dreamcalendars.com/sitemap-articles.xml
+
+# IndexNow key: https://www.dreamcalendars.com/0375ae8c5d4f42e8be96869ee48a53a2.txt
