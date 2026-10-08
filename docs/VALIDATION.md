@@ -20,3 +20,16 @@ See [the correction strips](demo/patch.html), [care plan](demo/index.html), [mac
 Tests cover global optimization against exhaustive enumeration on 20 small randomized scenarios, caregiver capacity, blackout/unavailable intervals, overlapping external care, proposed-event exclusion, conflicting source events, invalid dates, solver limits, event/settings impact attribution, cancellations/removals, stable ICS UIDs, byte-safe UTF-8 folding, HTML/ICS escaping, stale output cleanup, and Claude adapter transport/error handling.
 
 Claude extraction was tested with mocked responses. A live model-listing check returned HTTP 401; **no live extraction success, accuracy score, or production usage is claimed**. A valid API credential and a reviewed document evaluation set are needed next.
+
+## Browser demo checks
+
+The interactive synthetic example was checked in the browser on October 8, 2026. Selecting zero or one leave day for each parent produces the expected remaining care demand:
+
+| Parent A leave days | Parent B leave days | Remaining child-hours |
+| --- | --- | --- |
+| 0 | 0 | 12 |
+| 1 | 0 | 8 |
+| 0 | 1 | 4 |
+| 1 | 1 | 0 |
+
+These are precomputed outputs from the Python planner, selected locally by the page. The browser demo does not run a live optimizer or call Claude.

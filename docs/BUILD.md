@@ -26,3 +26,9 @@ Generated HTML escapes input and makes no network requests. Private files and ou
 ## Existing-site integration
 
 Introduce a small “Keep this calendar updated” action after printing on DreamCalendars. Build the edition registry and Claude ingestion as a separate backend, then let the PHP site reference published edition IDs. The product page and synthetic browser demo are published through GitHub Pages at reprint.dreamcalendars.com. The Python CLI and document extraction adapter remain separate; there is no hosted upload or AI endpoint. Before a live pilot, add consent, source permissions, reviewer authentication, retention/deletion controls, and rate/cost limits.
+
+## Publishing the browser demo
+
+GitHub Pages publishes the `docs/` folder from the `main` branch. `docs/CNAME` contains `reprint.dreamcalendars.com`, and the subdomain has a DNS-only CNAME to `mustafaozcaninfo.github.io`. GitHub provides the custom-domain certificate; enable Enforce HTTPS once certificate provisioning completes. Updates to the published folder deploy when they reach `main`.
+
+This hosting setup serves static files only. Run the Python CLI locally to create reviewed plans and correction strips. Keep API keys and household inputs out of the published directory.
