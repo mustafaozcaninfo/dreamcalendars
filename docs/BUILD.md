@@ -25,4 +25,4 @@ Generated HTML escapes input and makes no network requests. Private files and ou
 
 ## Existing-site integration
 
-Introduce a small “Keep this calendar updated” action after printing on DreamCalendars. Build the edition registry and Claude ingestion as a separate backend, then let the PHP site reference published edition IDs. The local prototype is not deployed. Before a live pilot, add consent, source permissions, reviewer authentication, retention/deletion controls, and rate/cost limits.
+Introduce a small “Keep this calendar updated” action after printing on DreamCalendars. Build the edition registry and Claude ingestion as a separate backend, then let the PHP site reference published edition IDs. The product page and synthetic browser demo are published through GitHub Pages at reprint.dreamcalendars.com. The Python CLI and document extraction adapter remain separate; there is no hosted upload or AI endpoint. Before a live pilot, add consent, source permissions, reviewer authentication, retention/deletion controls, and rate/cost limits.

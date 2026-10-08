@@ -1,6 +1,6 @@
 # DreamCalendars Reprint
 
-This repository contains only the Reprint startup prototype, its synthetic examples, and English documentation. The production DreamCalendars PHP website is maintained separately; this repository has no production deployment workflow.
+This repository contains only the Reprint calendar prototype, its synthetic examples, and English documentation. The production DreamCalendars PHP website is maintained separately; this repository publishes a static product page and synthetic demo through GitHub Pages. The Python CLI is separate from the hosted browser demo.
 
 Run project commands from the repository root. Python 3.11+ is required. Keep the offline planner independent of third-party services. Claude extraction is optional and must keep all candidates proposed until human review. Do not claim live API verification, customer traction, or unimplemented features without evidence.
 
