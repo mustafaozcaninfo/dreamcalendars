@@ -1,0 +1,429 @@
+{
+  "scenarios": {
+    "0-0": {
+      "summary": {
+        "baseline_gap_child_hours": 12.0,
+        "remaining_gap_child_hours": 12.0,
+        "covered_by_suggested_pto_child_hours": 0.0,
+        "suggested_pto_days": 0,
+        "pto_by_adult": {
+          "parent-a": 0,
+          "parent-b": 0
+        },
+        "review_queue_count": 1
+      },
+      "days": [
+        {
+          "date": "2026-10-12",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-13",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-14",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-15",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-16",
+          "baseline_gap_child_hours": 4.0,
+          "remaining_gap_child_hours": 4.0,
+          "gap_windows": [
+            [
+              "13:00",
+              "17:00"
+            ]
+          ],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-17",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-18",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-19",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-20",
+          "baseline_gap_child_hours": 8.0,
+          "remaining_gap_child_hours": 8.0,
+          "gap_windows": [
+            [
+              "09:00",
+              "17:00"
+            ]
+          ],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-21",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-22",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-23",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        }
+      ]
+    },
+    "0-1": {
+      "summary": {
+        "baseline_gap_child_hours": 12.0,
+        "remaining_gap_child_hours": 4.0,
+        "covered_by_suggested_pto_child_hours": 8.0,
+        "suggested_pto_days": 1,
+        "pto_by_adult": {
+          "parent-a": 0,
+          "parent-b": 1
+        },
+        "review_queue_count": 1
+      },
+      "days": [
+        {
+          "date": "2026-10-12",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-13",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-14",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-15",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-16",
+          "baseline_gap_child_hours": 4.0,
+          "remaining_gap_child_hours": 4.0,
+          "gap_windows": [
+            [
+              "13:00",
+              "17:00"
+            ]
+          ],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-17",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-18",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-19",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-20",
+          "baseline_gap_child_hours": 8.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": [
+            "parent-b"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-22",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-23",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        }
+      ]
+    },
+    "1-0": {
+      "summary": {
+        "baseline_gap_child_hours": 12.0,
+        "remaining_gap_child_hours": 8.0,
+        "covered_by_suggested_pto_child_hours": 4.0,
+        "suggested_pto_days": 1,
+        "pto_by_adult": {
+          "parent-a": 1,
+          "parent-b": 0
+        },
+        "review_queue_count": 1
+      },
+      "days": [
+        {
+          "date": "2026-10-12",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-13",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-14",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-15",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-16",
+          "baseline_gap_child_hours": 4.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": [
+            "parent-a"
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-18",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-19",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-20",
+          "baseline_gap_child_hours": 8.0,
+          "remaining_gap_child_hours": 8.0,
+          "gap_windows": [
+            [
+              "09:00",
+              "17:00"
+            ]
+          ],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-21",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-22",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-23",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        }
+      ]
+    },
+    "1-1": {
+      "summary": {
+        "baseline_gap_child_hours": 12.0,
+        "remaining_gap_child_hours": 0.0,
+        "covered_by_suggested_pto_child_hours": 12.0,
+        "suggested_pto_days": 2,
+        "pto_by_adult": {
+          "parent-a": 1,
+          "parent-b": 1
+        },
+        "review_queue_count": 1
+      },
+      "days": [
+        {
+          "date": "2026-10-12",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-13",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-14",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-15",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-16",
+          "baseline_gap_child_hours": 4.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": [
+            "parent-a"
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-18",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-19",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-20",
+          "baseline_gap_child_hours": 8.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": [
+            "parent-b"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-22",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        },
+        {
+          "date": "2026-10-23",
+          "baseline_gap_child_hours": 0.0,
+          "remaining_gap_child_hours": 0.0,
+          "gap_windows": [],
+          "suggested_pto": []
+        }
+      ]
+    }
+  },
+  "impact_child_hours": 10.0
+}

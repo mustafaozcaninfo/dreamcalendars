@@ -2,7 +2,7 @@
 
 ### Keep the paper calendar. Update the decision.
 
-DreamCalendars Reprint is a startup project that helps families keep printed calendars useful when school schedules change. It compares a reviewed update with the edition a family printed, creates a small correction strip for the changed entry, and explains the effect on childcare and leave planning.
+DreamCalendars Reprint is a calendar planning product that helps families keep printed calendars useful when school schedules change. It compares a reviewed update with the edition a family printed, creates a small correction strip for the changed entry, and explains the effect on childcare and leave planning.
 
 Built as a new product direction for [DreamCalendars.com](https://www.dreamcalendars.com/), Reprint connects the familiarity of a fridge calendar with the ability to track changing information.
 
@@ -30,6 +30,10 @@ Print the correction, cut along the border, and attach it to the original calend
 - **Optional Claude adapter:** extract proposed closure and dismissal events from document text, with exact evidence quotes for human review.
 
 **Status:** working local prototype with synthetic examples and **25 passing tests**. Claude transport is tested with mocked responses; authenticated live extraction is not yet verified. PDF/image ingestion, QR edition lookup, automatic school monitoring, and notifications are planned.
+
+## Live demo
+
+Visit [reprint.dreamcalendars.com](https://reprint.dreamcalendars.com/) to explore the product and try the synthetic care-planning demo. The public demo runs entirely in the browser; it does not upload documents or call an AI service.
 
 ## Run it
 
@@ -72,7 +76,6 @@ Our proposed distinction is **edition-specific paper corrections with source evi
 | Document | Purpose |
 | --- | --- |
 | [Concept](docs/CONCEPT.md) | Problem, target user, and business hypothesis |
-| [Claude for Startups](docs/CLAUDE-STARTUPS.md) | Concise English application drafts |
 | [Research](docs/RESEARCH.md) | Reddit problem signals and competing products |
 | [Build plan](docs/BUILD.md) | Architecture, limitations, and next steps |
 | [Validation](docs/VALIDATION.md) | Tests and synthetic demo results |
